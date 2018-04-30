@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "vehicle": "2014 Ford Fusion",
+      "image":
+        "https://rostmotor.com/wp-content/uploads/2017/04/20171204_111901-576x324.jpg",
+      "miles": "30K",
+      "price": "$15988",
+      "newused": "used",
+      "vehicle_type": "car"
+    },
+    {
+      "id": 2,
+      "vehicle": "2014 Ford Fusion AWD",
+      "image":
+        "https://rostmotor.com/wp-content/uploads/2017/05/20171204_124435-1-576x321.jpg",
+      "miles": "28K",
+      "price": "$18988",
+      "newused": "used",
+      "vehicle_type": "car"
+    },
+    {
+      "id": 3,
+      "vehicle": "2014 Ford Focus",
+      "image":
+        "https://rostmotor.com/wp-content/uploads/2016/07/20160728_142312.jpg",
+      "miles": "19K",
+      "price": "$14388",
+      "newused": "used",
+      "vehicle_type": "car"
+    },
+    {
+        "id": 4,
+        "vehicle": "2018 Ford F-150 SuperCrew XLT 4×4",
+        "image":
+          "https://rostmotor.com/wp-content/uploads/2018/03/20180308_143443-576x375.jpg",
+        "miles": "6",
+        "price": "$43731",
+        "newused": "new",
+        "vehicle_type": "truck"
+      },
+      {
+        "id": 5,
+        "vehicle": "2011 Kia Sportage EX AWD",
+        "image":
+          "https://rostmotor.com/wp-content/uploads/2017/05/20170502_103316.jpg",
+        "miles": "65K",
+        "price": "$13388",
+        "newused": "used",
+        "vehicle_type": "suv"
+      },
+      {
+        "id": 6,
+        "vehicle": "2003 Ford F-150 XLT",
+        "image":
+          "https://rostmotor.com/wp-content/uploads/2017/12/20171208_133200-576x364.jpg",
+        "miles": "19K",
+        "price": "$4988",
+        "newused": "used",
+        "vehicle_type": "truck"
+      }
+  ]
+  
