@@ -7,7 +7,9 @@
       "miles": "30K",
       "price": "$15988",
       "newused": "used",
-      "vehicle_type": "car"
+      "vehicle_type": "car",
+      "vehicle_color": "Red",
+      "dealer_notes": "Great car to get you to and from work safely - 1.5L Ecoboost"
     },
     {
       "id": 2,
@@ -17,7 +19,9 @@
       "miles": "28K",
       "price": "$18988",
       "newused": "used",
-      "vehicle_type": "car"
+      "vehicle_type": "car",
+      "vehicle_color": "Red",
+      "dealer_notes": "This fusion has all the specs! - 2.0L Ecoboost - This one has front bumper foglamps & killer silverblack-chrome rims"
     },
     {
       "id": 3,
@@ -27,7 +31,9 @@
       "miles": "19K",
       "price": "$14388",
       "newused": "used",
-      "vehicle_type": "car"
+      "vehicle_type": "car",
+      "vehicle_color": "Blue",
+      "dealer_notes": "Excellent gas milage! 2.0L I4 Engine"
     },
     {
         "id": 4,
@@ -37,7 +43,9 @@
         "miles": "6",
         "price": "$43731",
         "newused": "new",
-        "vehicle_type": "truck"
+        "vehicle_type": "truck",
+        "vehicle_color": "Silver",
+        "dealer_notes": "F150 S/Crew XLT - This truck has it all!"
       },
       {
         "id": 5,
@@ -47,7 +55,9 @@
         "miles": "65K",
         "price": "$13388",
         "newused": "used",
-        "vehicle_type": "suv"
+        "vehicle_type": "suv",
+        "vehicle_color": "White",
+        "dealer_notes": "You could get a sun tan from inside with two sun roofs! 2.4L I4 Engine, Excellent Condition!"
       },
       {
         "id": 6,
@@ -57,7 +67,9 @@
         "miles": "19K",
         "price": "$4988",
         "newused": "used",
-        "vehicle_type": "truck"
+        "vehicle_type": "truck",
+        "vehicle_color": "Green",
+        "dealer_notes": "This one won't stay long!  Great condition, work truck, 2 wheel drive"
       }
   ]
   

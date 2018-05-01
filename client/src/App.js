@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import FriendCard from "./components/FriendCard";
+import VehicleCard from "./components/VehicleCard";
 import Sort from "./components/Sort";
-import friends from "./friends.json";
+import cards from "./cards.json";
 
 class App extends Component {
 
@@ -12,15 +12,17 @@ class App extends Component {
 
   render() {
 
-    const friendsComponents = friends.map(friend => {
+    const cardComponents = cards.map(card => {
       return (
-        <FriendCard
-          vehicle={friend.vehicle}
-          image={friend.image}
-          miles={friend.miles}
-          price={friend.price}
-          newused={friend.newused}
-          vehicle_type={friend.vehicle_type}
+        <VehicleCard
+          vehicle={card.vehicle}
+          image={card.image}
+          miles={card.miles}
+          price={card.price}
+          newused={card.newused}
+          vehicle_color={card.vehicle_color}
+          vehicle_type={card.vehicle_type}
+          dealer_notes={card.dealer_notes}
         />
       )
     })
@@ -28,9 +30,9 @@ class App extends Component {
     return (
       <div>
         <Wrapper>
-          <Title>Ultimate Vehicle Index</Title>
-          <Sort>Sort By: </Sort>
-          {friendsComponents}
+          <Title></Title>
+          <Sort />
+          {cardComponents}
         </Wrapper>
       </div>
     );
