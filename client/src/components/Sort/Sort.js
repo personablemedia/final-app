@@ -1,27 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Sort.css";
 
-const Sort = props => (
-    <nav className="navbar fixed-top navbar-light bg-dark">
-    <div className="container-fluid">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary">ALL</button>
-                <button type="button" class="btn btn-primary active">USED</button>
-                <button type="button" class="btn btn-primary">NEW</button>
+class Sort extends Component {
+
+    handleClick = (filter) => {
+        this.props.filterCars(filter)
+    };
+
+
+    render() { 
+        return (
+            <nav className="navbar fixed-top navbar-light bg-dark">
+            <div className="container-fluid">
+                <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div className="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" className="btn btn-primary active" onClick={() => this.handleClick("used")}>USED</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.handleClick("new")}>NEW</button>
+                    </div>
+                    <div className="btn-group mr-2" role="group" aria-label="Second group">
+                        <button type="button" className="btn btn-primary active" onClick={() => this.handleClick("car")}>CAR</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.handleClick("truck")}>TRUCK</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.handleClick("suv")}>SUV</button>
+                    </div>
+                    <div className="btn-group" role="group" aria-label="Third group">
+                        <button type="button" className="btn btn-primary">PRICE RANGE</button>
+                    </div>
+                </div>
             </div>
-            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                <button type="button" class="btn btn-primary active">CAR</button>
-                <button type="button" class="btn btn-primary">TRUCK</button>
-                <button type="button" class="btn btn-primary">SUV</button>
-            </div>
-            <div class="btn-group" role="group" aria-label="Third group">
-                <button type="button" class="btn btn-primary">PRICE RANGE</button>
-            </div>
-        </div>
-    </div>
-    </nav>
-);
+            </nav>
+        );
+    };
+
+};
 export default Sort;
 
 
