@@ -14,30 +14,39 @@ class App extends Component {
     filteredCars : [...cards],
   };
 
-  filterCars = (arg) => {
-    console.log(arg);
-
-    // if (arg1 === "new" && arg2 === )
-
-    switch(arg) {
-      case "new":
-        const newCards = cards.filter(card => card.newused === "new");
-        return this.setState({filteredCars:newCards})
-      case "used":
-        const usedCards = cards.filter(card => card.newused === "used");
-        return this.setState({filteredCars:usedCards})
-      case "car":
-        const carCards = cards.filter(card => card.vehicle_type === "car");
-        return this.setState({filteredCars:carCards})
-      case "truck":
-        const truckCards = cards.filter(card => card.vehicle_type === "truck");
-        return this.setState({filteredCars:truckCards})
-      case "suv":
-        const suvCards = cards.filter(card => card.vehicle_type === "suv");
-        return this.setState({filteredCars:suvCards})
-      default:
-        return this.setState({filteredCars:cards})
-    };
+  filterCars = (arg1,arg2) => {
+    if (arg1 === "all" || arg2 === "all") {
+      if (arg1 === "all" && arg2 !== "all") {
+        if (arg2 === "car") {
+          const carCards = cards.filter(card => card.vehicle_type === "car");
+          return this.setState({filteredCars:carCards})
+        }
+        if (arg2 === "truck") {
+          const truckCards = cards.filter(card => card.vehicle_type === "truck");
+          return this.setState({filteredCars:truckCards})
+        }
+        if (arg2 === "suv") {
+          const suvCards = cards.filter(card => card.vehicle_type === "suv");
+          return this.setState({filteredCars:suvCards})
+        }
+      }
+      if (arg2 === "all" && arg1 !== "all") {
+        if (arg2 === "all") {
+          if (arg1 === "new") {
+            const newCards = cards.filter(card => card.newused === "new");
+            return this.setState({filteredCars:newCards})
+          }
+          if (arg1 === "used") {
+            const usedCards = cards.filter(card => card.newused === "used");
+            return this.setState({filteredCars:usedCards})
+          }
+        }
+      }
+    }
+    else {
+      const mixedCards = cards.filter(card => card.newused === arg1 && card.vehicle_type === arg2)
+      return this.setState({filteredCars:mixedCards})
+    }
   };
 
 
