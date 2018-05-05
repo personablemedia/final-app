@@ -16,6 +16,9 @@ class App extends Component {
 
   filterCars = (arg) => {
     console.log(arg);
+
+    // if (arg1 === "new" && arg2 === )
+
     switch(arg) {
       case "new":
         const newCards = cards.filter(card => card.newused === "new");

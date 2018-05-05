@@ -3,7 +3,20 @@ import "./Sort.css";
 
 class Sort extends Component {
 
+    state = {
+         group1 : "all",
+         group2 : "all"
+
+    }
     handleClick = (filter) => {
+
+        // if (filter === "new" || filter === "used") {
+        //     this.setState({group1 : filter});
+        // }
+        // else if (filter === "car" || filter === "truck" || filter == "suv") {
+        //     this.setState({group2 : filter})
+        // }
+
         this.props.filterCars(filter)
     };
 
