@@ -14,6 +14,8 @@ class Sort extends Component {
     }
 
     handleClick = (filter) => {
+        console.log("activeSearch: " + this.props.activeSearch);
+
         if (filter === "new" || filter === "used") {
             this.setState({group1 : filter});
             this.props.filterCars(filter, this.state.group2);
@@ -30,16 +32,16 @@ class Sort extends Component {
             <nav className="navbar fixed-top navbar-light bg-dark">
             <div className="container-fluid">
                 <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                    <div className="btn-group mr-2" role="group" aria-label="First group">
+                    <div className="button1" role="group" aria-label="First group">
                         <button type="button" className="btn btn-primary" id="used" onClick={() => this.handleClick("used")}>USED</button>
                         <button type="button" className="btn btn-primary" id="new" onClick={() => this.handleClick("new")}>NEW</button>
                     </div>
-                    <div className="btn-group mr-2" role="group" aria-label="Second group">
+                    <div className="button1" role="group" aria-label="Second group">
                         <button type="button" className="btn btn-primary" id="car" onClick={() => this.handleClick("car")}>CAR</button>
                         <button type="button" className="btn btn-primary" id="truck" onClick={() => this.handleClick("truck")}>TRUCK</button>
                         <button type="button" className="btn btn-primary" id="suv" onClick={() => this.handleClick("suv")}>SUV</button>
                     </div>
-                    <div className="btn-group" role="group" aria-label="Third group">
+                    <div className="button1" role="group" aria-label="Third group">
                         <button type="button" className="btn btn-primary">PRICE RANGE</button>
                     </div>
                 </div>
