@@ -6,12 +6,29 @@ class Sort extends Component {
     state = {
          group1 : "all",
          group2 : "all"
-
     }
 
     carFilter = () => {
         this.props.filterCars(this.state.group1, this.state.group2);
     }
+
+    getClass = () => {
+        document.addEventListener('click', function(e) {
+            let className = e.path[0].className.split(' ');
+            if (!className.includes('link')) return;
+            let links = document.getElementsByClassName('active');
+            for (let link of links) {
+                link.classList.remove('active');
+                e.path[0].classList.add('active');
+            }
+        });
+    };
+
+    componentDidMount () {
+        this.getClass();
+    }
+
+
 
     handleClick = (filter) => {
         console.log("activeSearch: " + this.props.activeSearch);
@@ -23,6 +40,7 @@ class Sort extends Component {
         if (filter === "car" || filter === "truck" || filter === "suv") {
             this.setState({group2 : filter})
             this.props.filterCars(this.state.group1, filter);
+
         }
     };
 
@@ -33,13 +51,13 @@ class Sort extends Component {
             <div className="container-fluid">
                 <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                     <div className="button1" role="group" aria-label="First group">
-                        <button type="button" className="btn btn-primary" id="used" onClick={() => this.handleClick("used")}>USED</button>
-                        <button type="button" className="btn btn-primary" id="new" onClick={() => this.handleClick("new")}>NEW</button>
+                        <button type="button" className="btn btn-primary link active" id="used" onClick={() => this.handleClick("used")}>USED</button>
+                        <button type="button" className="btn btn-primary link" id="new" onClick={() => this.handleClick("new")}>NEW</button>
                     </div>
                     <div className="button1" role="group" aria-label="Second group">
-                        <button type="button" className="btn btn-primary" id="car" onClick={() => this.handleClick("car")}>CAR</button>
-                        <button type="button" className="btn btn-primary" id="truck" onClick={() => this.handleClick("truck")}>TRUCK</button>
-                        <button type="button" className="btn btn-primary" id="suv" onClick={() => this.handleClick("suv")}>SUV</button>
+                        <button type="button" className="btn btn-primary link" id="car" onClick={() => this.handleClick("car")}>CAR</button>
+                        <button type="button" className="btn btn-primary link" id="truck" onClick={() => this.handleClick("truck")}>TRUCK</button>
+                        <button type="button" className="btn btn-primary link" id="suv" onClick={() => this.handleClick("suv")}>SUV</button>
                     </div>
                     <div className="button1" role="group" aria-label="Third group">
                         <button type="button" className="btn btn-primary">PRICE RANGE</button>
@@ -52,14 +70,3 @@ class Sort extends Component {
 
 };
 export default Sort;
-
-
-{/*         <div className="navbar-header">
-        <a className="navbar-brand" href="">UVDex</a>
-        <a className="btn btn-primary active" href="" role="button">ALL</a>
-<a className="btn btn-primary" href="" role="button">USED</a>
-<a className="btn btn-primary" href="" role="button">NEW</a>
-<a className="btn btn-primary" href="" role="button">CAR</a>
-<a className="btn btn-primary" href="" role="button">TRUCK</a>
-<a className="btn btn-primary" href="" role="button">SUV</a>
-<a className="btn btn-primary" href="" role="button">PRICE RANGE</a> */}

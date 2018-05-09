@@ -19,3 +19,7 @@
 }
 
 /* .button1:hover {opacity: 0.6} */
+
+.active {
+  background-color: blueviolet !important;
+}
